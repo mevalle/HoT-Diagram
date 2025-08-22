@@ -4,7 +4,7 @@ HoT Diagram is a short name for "Hasse of (Hypothesis) Test Diagram." The HoT di
 
 You should input a data frame (Pandas) where rows correspond to experiments, and columns correspond to methods. Optional parameters include the significance level of the hypothesis test (default: significance_level = 0.99), the assumption that the data follows a normal distribution (default: Gaussian = True), pre-processing the data (default: NormalizeData = False), and the information that the lower values are best (default: LowerAreBest = False).
 
-The output is a boxplot and a Hasse diagram where the best models appear on top (if LowerAreBest = False). The Hasse diagram is a graph in which the nodes are the methods. An edge is built whenever the technique on top overcomes the method above using  a pair-wise hypothesis test with the given significance level. Edges that can be deduced from transitivity are omitted from the diagram. Despite the best methods usually appearing at the top, the results should be carefully interpreted!
+The output consists of a boxplot and a Hasse diagram, which are saved as PDF files in a folder called "Figures" (the code creates the folder if it does not exist). The Hasse diagram is a graph in which the nodes are the methods. The best models are displayed at the top (if LowerAreBest = False). An edge is built whenever the technique on top overcomes the method above using  a pair-wise hypothesis test with the given significance level. Edges that can be deduced from transitivity are omitted from the diagram. Despite the best methods usually appearing at the top, the results should be carefully interpreted!
 
 See the Jupyter Notebook as an example!
 
